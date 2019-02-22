@@ -2,8 +2,6 @@ const express = require('express');
 
 const app = express();
 
-const router = express.Router();
-
 app.get('/', (req, res) => res.json({ msg: 'Test Works' }));
 app.get('/hello', (req, res) => res.json({ msg: 'Hello World' }));
 app.get('/publicHello', (req, res) => res.json({ msg: 'Public Hello World' }));
