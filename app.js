@@ -10,6 +10,6 @@ app.get('/privateHello', (req, res) =>
   res.json({ msg: 'Private Hello World' })
 );
 
-const port = process.env.PORT || 9000;
+const port = 8044;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
