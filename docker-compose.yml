@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  tony-kong:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: tony-kong:local
+    container_name: tony-kong-container
+    ports:
+      - 8044:8044
+    volumes:
+      - /tony-kong/node_modules
+      - .:/tony-kong
+    command: ["npm", "start"]
