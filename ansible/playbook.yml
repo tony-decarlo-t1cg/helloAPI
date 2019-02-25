@@ -1,0 +1,15 @@
+---
+- hosts: api-service-server
+  become: true
+
+  tasks:
+    - name: Copy Api Service Files
+      copy:
+        src: ../api/
+        dest: /opt/tony/kong-service/
+        owner: root
+        group: root
+        mode: 0640
+
+    - name: Start Api
+      shell: cd /opt/tony/kong-service; npm i; nohup npm start &
